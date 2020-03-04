@@ -1,3 +1,42 @@
+/* For computer screens */
+
+main {
+	display: flex;
+	flex-direction: row;
+}
+
+.social {
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid;
+	border-color: #656565;
+	justify-content: space-around;
+}
+
+.social_icon {
+	margin: 10px;
+}
+
+li {
+	list-style-type: none;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+}
+
+.hamburger {
+	padding: 10px;
+	display: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,4 +49,53 @@ body {
 
 .logo > img {
   width: 50px;
+}
+
+.navbar {
+	display: flex;
+	color: white;
+	flex-direction: row-reverse;
+	background-color: #656565;
+}
+
+.menu-item {
+	padding: 0px 10px 0px 10px;
+}
+
+.product {
+	padding: 10px;
+	margin: 10px;
+	border-style: solid;
+	border-color: #656565;
+	border-width: 1px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/* For tablets */
+@media only screen and (max-width: 900px) {
+	main {
+		flex-direction: column;
+	}
+}
+
+/* For phones */
+@media only screen and (max-width: 640px) {
+	.hamburger {
+		display: inline;
+	}
+	.menu {
+		display: none;
+	}
+	header {
+		flex-direction: column;
+		text-align: center;
+		/*justify-content: center;*/
+	}
+	.social {
+		border: none;
+	}
+	main {
+		flex-direction: column;
+	}
 }
